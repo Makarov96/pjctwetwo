@@ -1,0 +1,40 @@
+runtime: python27
+threadsafe: true
+api_version: 1
+
+handlers:
+- url: /(.+\.js)
+  static_files: dist/\1
+  upload: dist/(.+\.js)
+
+- url: /(.+\.css)
+  static_files: dist/\1
+  upload: dist/(.+\.css)
+
+- url: /(.+\.png)
+  static_files: dist/\1
+  upload: dist/(.+\.png)
+
+- url: /(.+\.jpg)
+  static_files: dist/\1
+  upload: dist/(.+\.jpg)
+
+- url: /(.+\.svg)
+  static_files: dist/\1
+  upload: dist/(.+\.svg)
+
+- url: /favicon.ico
+  static_files: dist/favicon.ico
+  upload: dist/favicon.ico
+
+- url: /(.+\.json)
+  static_files: dist/\1
+  upload: dist/(.+\.json)
+
+- url: /(.+)
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /home
+  static_files: dist/index.html
+  upload: dist/index.html
